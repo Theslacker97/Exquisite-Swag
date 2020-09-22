@@ -24,9 +24,26 @@
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="https://kit.fontawesome.com/e9135b40ea.js" crossorigin="anonymous"></script>
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=<773586440091616>&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 </head>
 
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=773586440091616&autoLogAppEvents=1"
+        nonce="IL06zIbe"></script>
 
     <div id="preloder">
         <div class="loader"></div>
@@ -397,15 +414,24 @@
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <h4 class="bgs-title">from the blog</h4>
+                    <h4 class="bgs-title">from our social media</h4>
                     <div class="blog-item">
                         <div class="bi-thumb">
                             <img src="img/blog-thumb/1.jpg" alt="">
                         </div>
                         <div class="bi-content">
                             <h5>10 tips to dress like a queen</h5>
-                            <div class="bi-meta">July 02, 2018 | By maria deloreen</div>
-                            <a href="#" class="readmore">Read More</a>
+                            <!--Your Group Plugin for the Web code-->
+                            <div class="fb-page"
+                                data-href="https://www.facebook.com/Exquisite-Swag-the-best-or-fokol-2167541850162438/"
+                                data-tabs="reviews" data-width="" data-height="" data-small-header="true"
+                                data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                <blockquote
+                                    cite="https://www.facebook.com/Exquisite-Swag-the-best-or-fokol-2167541850162438/"
+                                    class="fb-xfbml-parse-ignore"><a
+                                        href="https://www.facebook.com/Exquisite-Swag-the-best-or-fokol-2167541850162438/">Facebook</a>
+                                </blockquote>
+                            </div>
                         </div>
                     </div>
                     <div class="blog-item">
@@ -439,52 +465,57 @@
             <div class="row">
                 <div class="col-lg-3 col-md-8 col-sm-12">
                     <div class="footer-widget about-widget">
-                        <img src="img/logo.png" class="footer-logo" alt="">
-                        <p>Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam fringilla faucibus
-                            urna, id dapibus erat iaculis ut. Integer ac sem.</p>
-                        <div class="cards">
+                        <h6 class="fw-title">About</h6>
+                        <img src="assets/img/logo2.png" class="footer-logo" alt="">
+                        <p>SWAG is an online store that provides the BEST OR Fokol merchandise that allows you to blend
+                            in different environment.</p>
+                        <!-- <div class="cards">
                             <img src="img/cards/5.png" alt="">
                             <img src="img/cards/4.png" alt="">
                             <img src="img/cards/3.png" alt="">
                             <img src="img/cards/2.png" alt="">
                             <img src="img/cards/1.png" alt="">
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
                     <div class="footer-widget">
                         <h6 class="fw-title">usefull Links</h6>
+                        <p>Comming soon!</p>
                         <ul>
-                            <li><a href="#">Partners</a></li>
-                            <li><a href="#">Bloggers</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Terms of Use</a></li>
-                            <li><a href="#">Press</a></li>
+
+                            <!-- <li><a href="#">Partners</a></li> -->
+                            <!-- <li><a href="#">Bloggers</a></li> -->
+                            <!-- <li><a href="#">Support</a></li> -->
+                            <!-- <li><a href="#">Terms of Use</a></li> -->
+                            <!-- <li><a href="#">Press</a></li> -->
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
                     <div class="footer-widget">
                         <h6 class="fw-title">Sitemap</h6>
+                        <p>Comming soon!</p>
                         <ul>
-                            <li><a href="#">Partners</a></li>
-                            <li><a href="#">Bloggers</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Terms of Use</a></li>
-                            <li><a href="#">Press</a></li>
+                            <!-- <li><a href="#">Partners</a></li> -->
+                            <!-- <li><a href="#">Bloggers</a></li> -->
+                            <!-- <li><a href="#">Support</a></li> -->
+                            <!-- <li><a href="#">Terms of Use</a></li> -->
+                            <!-- <li><a href="#">Press</a></li> -->
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
                     <div class="footer-widget">
                         <h6 class="fw-title">Shipping & returns</h6>
+                        <p>Comming soon!</p>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Track Orders</a></li>
-                            <li><a href="#">Returns</a></li>
-                            <li><a href="#">Jobs</a></li>
-                            <li><a href="#">Shipping</a></li>
-                            <li><a href="#">Blog</a></li>
+                            <!-- <li><a href="#">About Us</a></li> -->
+                            <!-- <li><a href="#">Track Orders</a></li> -->
+                            <!-- <li><a href="#">Returns</a></li> -->
+                            <!-- <li><a href="#">Jobs</a></li> -->
+                            <!-- <li><a href="#">Shipping</a></li> -->
+                            <!-- <li><a href="#">Blog</a></li> -->
                         </ul>
                     </div>
                 </div>
@@ -492,9 +523,11 @@
                     <div class="footer-widget">
                         <h6 class="fw-title">Contact</h6>
                         <div class="text-box">
+                            ..
+
                             <p>Exquisite Swag Ltd </p>
-                            <p>1481 Creekside Lane Avila Beach, CA 93424, </p>
-                            <p>+27 00 00 00</p>
+                            <p>The Rock street, Naledi Ext, </p>
+                            <p>+27 2771 4427</p>
                             <!-- <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
                                     data-cfemail="a5cac3c3ccc6c0e5dccad0d7c0c8c4ccc98bc6cac8">[email&#160;protected]</a>
                             </p> -->
