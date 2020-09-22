@@ -1648,7 +1648,7 @@ ol {
 	padding: 35px 55px 15px;
 	margin-top: 80px;
 }
-
+    
 .payment-method .pm-item {
 	margin-bottom: 15px;
 }
@@ -1874,9 +1874,9 @@ ol {
 		font-size: 13px;
 		margin-left: 14px;
 	}
-	.hs-item .hs-left {
+	/* .hs-item .hs-left {
 		display: none;
-	}
+	} */
 	.hs-item .hs-right {
 		width: 100%;
 		float: none;
@@ -1961,9 +1961,9 @@ ol {
 	.hero-section {
 		height: auto;
 	}
-	.hs-item .hs-left {
+	/* .hs-item .hs-left {
 		display: none;
-	}
+	} */
 	.hs-item .hs-right {
 		width: 100%;
 		float: none;
@@ -2101,4 +2101,4 @@ ol {
 	.payment-method {
 		padding: 30px 30px 10px;
 	}
-}   
+}
