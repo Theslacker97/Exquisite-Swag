@@ -23,7 +23,7 @@ app.use(express.static('public'));
 
 app.post('/placeOrder', (req, res) => {
     email.send();
-    res.send("Your order has been placed thank you we will contact you as soon as possible")
+    res.send("Your order has been placed thank you we will contact you as soon as possible to confirm your order")
 });
 
 const PORT = process.env.PORT || 3000;
