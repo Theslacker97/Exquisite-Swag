@@ -41,6 +41,29 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- email script -->
+    <!-- <script type="text/javascript">
+        const userMail = document.querySelector('.userMail');
+        console.log(userMail.value);
+
+        function sendEmail() {
+            Email.send({
+                // Host: "smtp.gmail.com",
+                // Username: "sender@email_address.com",
+                // Password: "Enter your password",
+                To: 'sbudiction@protonmail.com',
+                From: 'helo',
+                Subject: "Sending Email using javascript",
+                Body: "Well that was easy!!",
+            })
+                .then(function (message) {
+                    alert("mail sent successfully")
+                });
+        } 
+    </script> -->
+
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -52,6 +75,8 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    
 </head>
 
 <body>
@@ -158,7 +183,9 @@
                         </div>
                         <p>Fill out the form below to order your item</p>
                     </div>
-                    <form class="ui form attached fluid segment">
+                    <!-- <php include './assets/js/placeOrder.php' ?> -->
+                    <form method="POST" action="/placeOrder" class="ui form attached fluid segment">
+
                         <div class="two fields">
                             <div class="field">
                                 <label>First Name</label>
@@ -175,7 +202,12 @@
                         </div>
                         <div class="field">
                             <label>Message</label>
-                            <input type="text">
+                            <!-- <input type="text"> -->
+                            <textarea name="message" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="field">
+                            <label>Email</label>
+                            <input class="userMail" type="email">
                         </div>
                         <div class="inline field">
                             <div class="ui checkbox">
@@ -183,7 +215,7 @@
                                 <label for="terms">I agree to the terms and conditions</label>
                             </div>
                         </div>
-                        <div class="ui blue submit button">Submit</div>
+                        <button type="submit" class="ui blue submit button">Submit</button>
                     </form>
                     <div class="ui bottom attached warning message">
                         <i class="icon help"></i>
@@ -325,7 +357,8 @@
                         <div class="product-info">
                             <!-- <h6>Long red Shirt</h6> -->
                             <p>$350.00</p>
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE ORDER</a>
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE
+                                ORDER</a>
                         </div>
                     </div>
                 </div>
@@ -348,7 +381,8 @@
                         <div class="product-info">
                             <!-- <h6>Hype grey shirt</h6> -->
                             <p>$350.00</p>
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE ORDER</a>
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE
+                                ORDER</a>
                         </div>
                     </div>
                 </div>
@@ -393,7 +427,8 @@
                         <div class="product-info">
                             <!-- <h6>Denim men shirt</h6> -->
                             <p>$350.00 <span></span></p>
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE ORDER</a>
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE
+                                ORDER</a>
                         </div>
                     </div>
                 </div>
@@ -415,7 +450,8 @@
                         <div class="product-info">
                             <!-- <h6>Long red Shirt</h6> -->
                             <p>R350.00</p>
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE ORDER</a>
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE
+                                ORDER</a>
                         </div>
                     </div>
                 </div>
@@ -438,7 +474,8 @@
                         <div class="product-info">
                             <!-- <h6>Hype grey shirt</h6> -->
                             <p>R350.00</p>
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE ORDER</a>
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE
+                                ORDER</a>
                         </div>
                     </div>
                 </div>
@@ -460,7 +497,8 @@
                         <div class="product-info">
                             <!-- <h6>long sleeve jacket</h6> -->
                             <p>R350.00</p>
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE ORDER</a>
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE
+                                ORDER</a>
                         </div>
                     </div>
                 </div>
@@ -482,7 +520,8 @@
                         <div class="product-info">
                             <!-- <h6>Denim men shirt</h6> -->
                             <p>R350.00 <span></span></p>
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE ORDER</a>
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE
+                                ORDER</a>
                         </div>
                     </div>
                 </div>
@@ -497,7 +536,7 @@
                 <li class="control" data-filter=".new">New arrivals</li>
                 <li class="control" data-filter="all">Summer</li>
                 <li class="control" data-filter=".best">Shortsleeves</li>
-            </ul>
+            </ul><?php include 'placeOrder.php';?>
             <div class="row" id="product-filter">
                 <div class="mix col-lg-3 col-md-6 best">
                     <div class="product-item">
@@ -517,7 +556,8 @@
                         <div class="product-info">
                             <h6>Short yellow Shirt</h6>
                             <p>R120.00</p>
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE ORDER</a>
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE
+                                ORDER</a>
                         </div>
                     </div>
                 </div>
@@ -540,7 +580,8 @@
                         <div class="product-info">
                             <h6>Short white shirt</h6>
                             <p>R120.00</p>
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE ORDER</a>
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE
+                                ORDER</a>
                         </div>
                     </div>
                 </div>
@@ -562,7 +603,8 @@
                         <div class="product-info">
                             <h6>Short sleeve shirt</h6>
                             <p>R120.00</p>
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE ORDER</a>
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE
+                                ORDER</a>
                         </div>
                     </div>
                 </div>
@@ -585,7 +627,8 @@
                         <div class="product-info">
                             <h6>Short sleeve shirt</h6>
                             <p>R120.00 <span>R 120.00</span></p>
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE ORDER</a>
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE
+                                ORDER</a>
                         </div>
                     </div>
                 </div>
@@ -606,11 +649,11 @@
                         </figure>
                         <div class="product-info">
                              <h6>Long red Shirt</h6> -->
-                            <!-- <p>$39.90</p> -->
-                            <!-- <a href="#" class="site-btn btn-line">ADD TO CART</a> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                 <!-- </div>  --> 
+                <!-- <p>$39.90</p> -->
+                <!-- <a href="#" class="site-btn btn-line">ADD TO CART</a> -->
+                <!-- </div> -->
+                <!-- </div> -->
+                <!-- </div>  -->
                 <!-- <div class="mix col-lg-3 col-md-6 new">
                     <div class="product-item">
                         <figure>
@@ -629,11 +672,11 @@
                         </figure>
                         <div class="product-info">
                              <h6>Hype grey shirt</h6> -->
-                            <!-- <p>$19.50</p> -->
-                            <!-- <a href="#" class="site-btn btn-line">ADD TO CART</a> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                <!-- </div> --> 
+                <!-- <p>$19.50</p> -->
+                <!-- <a href="#" class="site-btn btn-line">ADD TO CART</a> -->
+                <!-- </div> -->
+                <!-- </div> -->
+                <!-- </div> -->
                 <!-- <div class="mix col-lg-3 col-md-6 best">
                     <div class="product-item">
                         <figure>
@@ -651,11 +694,11 @@
                         </figure>
                         <div class="product-info">
                              <h6>long sleeve jacket</h6> -->
-                            <!-- <p>$59.90</p> -->
-                            <!-- <a href="#" class="site-btn btn-line">ADD TO CART</a> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                <!-- </div> --> 
+                <!-- <p>$59.90</p> -->
+                <!-- <a href="#" class="site-btn btn-line">ADD TO CART</a> -->
+                <!-- </div> -->
+                <!-- </div> -->
+                <!-- </div> -->
                 <!-- <div class="mix col-lg-3 col-md-6 best">
                     <div class="product-item">
                         <figure>
@@ -673,10 +716,10 @@
                         </figure>
                         <div class="product-info">
                              <h6>Denim men shirt</h6> -->
-                            <!-- <p>$32.20 <span>RRP 64.40</span></p> -->
-                            <!-- <a href="#" class="site-btn btn-line">ADD TO CART</a> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
+                <!-- <p>$32.20 <span>RRP 64.40</span></p> -->
+                <!-- <a href="#" class="site-btn btn-line">ADD TO CART</a> -->
+                <!-- </div> -->
+                <!-- </div> -->
                 <!-- </div> -->
             </div>
         </div>
@@ -709,7 +752,8 @@
                         <div class="product-info">
                             <h6>Short yellow Shirt</h6>
                             <p>R120.00</p>
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE ORDER</a>
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE
+                                ORDER</a>
                         </div>
                     </div>
                 </div>
@@ -732,7 +776,8 @@
                         <div class="product-info">
                             <h6>Short white shirt</h6>
                             <p>R120.00</p>
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE ORDER</a>
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE
+                                ORDER</a>
                         </div>
                     </div>
                 </div>
@@ -754,7 +799,8 @@
                         <div class="product-info">
                             <h6>Short sleeve shirt</h6>
                             <p>R120.00</p>
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE ORDER</a>
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE
+                                ORDER</a>
                         </div>
                     </div>
                 </div>
@@ -777,7 +823,8 @@
                         <div class="product-info">
                             <h6>Short sleeve shirt</h6>
                             <p>R120.00 <span>R 120.00</span></p>
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE ORDER</a>
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE
+                                ORDER</a>
                         </div>
                     </div>
                 </div>
@@ -797,12 +844,13 @@
                             </div>
                         </figure>
                         <div class="product-info">
-                             <h6>Long sleeve Shirt</h6>
+                            <h6>Long sleeve Shirt</h6>
                             <p>R150.00</p>
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE ORDER</a>
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE
+                                ORDER</a>
                         </div>
                     </div>
-                 </div> 
+                </div>
                 <!-- <div class="mix col-lg-3 col-md-6 new">
                     <div class="product-item">
                         <figure>
@@ -821,11 +869,11 @@
                         </figure>
                         <div class="product-info">
                              <h6>Hype grey shirt</h6> -->
-                            <!-- <p>$19.50</p> -->
-                            <!-- <a href="#" class="site-btn btn-line">ADD TO CART</a> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                <!-- </div> --> 
+                <!-- <p>$19.50</p> -->
+                <!-- <a href="#" class="site-btn btn-line">ADD TO CART</a> -->
+                <!-- </div> -->
+                <!-- </div> -->
+                <!-- </div> -->
                 <!-- <div class="mix col-lg-3 col-md-6 best">
                     <div class="product-item">
                         <figure>
@@ -843,11 +891,11 @@
                         </figure>
                         <div class="product-info">
                              <h6>long sleeve jacket</h6> -->
-                            <!-- <p>$59.90</p> -->
-                            <!-- <a href="#" class="site-btn btn-line">ADD TO CART</a> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                <!-- </div> --> 
+                <!-- <p>$59.90</p> -->
+                <!-- <a href="#" class="site-btn btn-line">ADD TO CART</a> -->
+                <!-- </div> -->
+                <!-- </div> -->
+                <!-- </div> -->
                 <!-- <div class="mix col-lg-3 col-md-6 best">
                     <div class="product-item">
                         <figure>
@@ -865,10 +913,10 @@
                         </figure>
                         <div class="product-info">
                              <h6>Denim men shirt</h6> -->
-                            <!-- <p>$32.20 <span>RRP 64.40</span></p> -->
-                            <!-- <a href="#" class="site-btn btn-line">ADD TO CART</a> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
+                <!-- <p>$32.20 <span>RRP 64.40</span></p> -->
+                <!-- <a href="#" class="site-btn btn-line">ADD TO CART</a> -->
+                <!-- </div> -->
+                <!-- </div> -->
                 <!-- </div> -->
             </div>
         </div>
@@ -1049,7 +1097,8 @@
 
 
     <script src="assets/js/jquery-3.2.1.min.js" type="616049d410e3644c48c22090-text/javascript"></script>
-    <!-- <script src="assets/js/bootstrap.min.js" type="616049d410e3644c48c22090-text/javascript"></script> -->
+    <!-- <script src="/placeOrder.php"></script> -->
+
     <script src="assets/js/owl.carousel.min.js" type="616049d410e3644c48c22090-text/javascript"></script>
     <script src="assets/js/mixitup.min.js" type="616049d410e3644c48c22090-text/javascript"></script>
     <script src="assets/js/sly.min.js" type="616049d410e3644c48c22090-text/javascript"></script>
