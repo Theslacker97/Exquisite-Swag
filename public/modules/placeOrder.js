@@ -2,9 +2,8 @@ module.exports = (nodemailer) => {
 
     let status = "";
 
-    const send = () => {
-        console.log("email transporter");
-
+    const send = (email, text, product, number, firstName, lastName) => {
+        console.log("swag transporter");
         const transporter = nodemailer.createTransport({
             host: 'smtp.ethereal.email',
             port: 587,
@@ -15,10 +14,10 @@ module.exports = (nodemailer) => {
         });
 
         var mailOptions = {
-            from: 'sbudiction@gmail.com',
+            from: email,
             to: 'graham.shanahan69@ethereal.email',
-            subject: 'Sending Email using Node.js',
-            text: 'That was easy!'
+            subject: firstName + ' ' + lastName + ' Ordered ' + product,
+            text: text + '\n' + 'contact number: ' + number
         };
 
         transporter.sendMail(mailOptions, (error, info) => {
