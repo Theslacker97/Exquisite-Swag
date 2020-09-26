@@ -22,7 +22,13 @@ const email = SendMail(nodemailer);
 app.use(express.static('public'));
 
 app.post('/placeOrder', (req, res) => {
-    email.send();
+    email.send(
+        req.body.mail,
+        req.body.message,
+        req.body.customRadio,
+        req.body.cel,
+        req.body.firstName,
+        req.body.lastName);
     res.send("Your order has been placed thank you we will contact you as soon as possible to confirm your order")
 });
 

@@ -17,7 +17,7 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css" /> -->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    <!-- <link rel="stylesheet" href="assets/css/font-awesome.min.css" /> -->
     <link rel="stylesheet" href="assets/css/owl.carousel.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/animate.css" />
@@ -43,27 +43,6 @@
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-    <!-- email script -->
-    <!-- <script type="text/javascript">
-        const userMail = document.querySelector('.userMail');
-        console.log(userMail.value);
-
-        function sendEmail() {
-            Email.send({
-                // Host: "smtp.gmail.com",
-                // Username: "sender@email_address.com",
-                // Password: "Enter your password",
-                To: 'sbudiction@protonmail.com',
-                From: 'helo',
-                Subject: "Sending Email using javascript",
-                Body: "Well that was easy!!",
-            })
-                .then(function (message) {
-                    alert("mail sent successfully")
-                });
-        } 
-    </script> -->
-
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -76,7 +55,7 @@
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    
+
 </head>
 
 <body>
@@ -179,6 +158,7 @@
                 <div class="modal-body">
                     <div class="ui attached message">
                         <div class="header">
+                            <img src="assets/img/logo.png" alt="logo">
                             Welcome to our site!
                         </div>
                         <p>Fill out the form below to order your item</p>
@@ -189,31 +169,48 @@
                         <div class="two fields">
                             <div class="field">
                                 <label>First Name</label>
-                                <input placeholder="First Name" type="text">
+                                <input name="firstName" placeholder="First Name" type="text">
                             </div>
                             <div class="field">
                                 <label>Last Name</label>
-                                <input placeholder="Last Name" type="text">
+                                <input name="lastName" placeholder="Last Name" type="text">
                             </div>
                         </div>
                         <div class="field">
                             <label>Contact number</label>
-                            <input placeholder="number" type="number">
+                            <input name="cel" placeholder="Number" type="tel">
                         </div>
                         <div class="field">
                             <label>Message</label>
                             <!-- <input type="text"> -->
-                            <textarea name="message" id="" cols="30" rows="10"></textarea>
+                            <textarea name="message" id="" cols="30" rows="10"
+                                style="margin-top: 0px; margin-bottom: 0px; height: 69px;"></textarea>
                         </div>
                         <div class="field">
                             <label>Email</label>
-                            <input class="userMail" type="email">
+                            <input name="mail" class="userMail" type="email">
                         </div>
                         <div class="inline field">
-                            <div class="ui checkbox">
-                                <input type="checkbox" id="terms">
-                                <label for="terms">I agree to the terms and conditions</label>
-                            </div>
+                                <div class="custom-control custom-radio">
+                                    <input value="Hoodie" type="radio" id="customRadio1" name="customRadio"
+                                        class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio1">Hoodie</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input value="Hat" type="radio" id="customRadio2" name="customRadio"
+                                        class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio2">Hat</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input value="Longsleeve" type="radio" id="customRadio3" name="customRadio"
+                                        class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio3">Longsleeves</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input value="Shortsleeve" type="radio" id="customRadio4" name="customRadio"
+                                        class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio4">Shortsleeves</label>
+                                </div>
                         </div>
                         <button type="submit" class="ui blue submit button">Submit</button>
                     </form>
@@ -403,8 +400,9 @@
                         </figure>
                         <div class="product-info">
                             <!-- <h6>long sleeve jacket</h6> -->
-                            <!-- <p>$59.90</p> -->
-                            <!-- <a href="#" class="site-btn btn-line">ADD TO CART</a> -->
+                            <p>$350.00</p>
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="site-btn btn-line">PLACE
+                                ORDER</a>
                         </div>
                     </div>
                 </div>
@@ -1084,10 +1082,10 @@
             <p class="copyright">
 
                 Copyright &copy;
-                <script data-cfasync="false"
+                <!-- <script data-cfasync="false"
                     src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-                <script
-                    type="616049d410e3644c48c22090-text/javascript">document.write(new Date().getFullYear());</script>
+                <script -->
+                type="616049d410e3644c48c22090-text/javascript">document.write(new Date().getFullYear());</script>
                 All rights reserved<i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="index.htm"
                     target="_blank">Exquisite Swag</a>
 
